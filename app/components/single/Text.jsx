@@ -15,14 +15,14 @@ export default function Text({
 }) {
     const textStyles = cn(
         "antialiased",
-        Tag?.startsWith("h") && `${bigShoulders.className} font-black`,
-        Tag === "h1" && "text-8xl leading-[88px]",
-        Tag === "h2" && "text-7xl leading-[70px]",
-        Tag === "h3" && "text-6xl leading-[50px]",
-        Tag === "h4" && "text-4xl leading-[36px]",
-        variant === "md" && ` font-light text-2xl leading-[32px]`,
-        variant === "sm" && ` font-light text-lg leading-[28px]`,
-        display? `${bigShoulders.className}`: `${outfit.className}`,
+        // `${outfit.className}`,
+        Tag === "h1" && `font-black text-[60px] leading-[55px] sm:text-[70px] sm:leading-[65px] lg:text-8xl lg:leading-[88px] ${bigShoulders.className}`,
+        Tag === "h2" && `font-black text-[50px] leading-[45px] sm:text-[55px] sm:leading-[50px] lg:text-7xl lg:leading-[70px] ${bigShoulders.className}`,
+        Tag === "h3" && `font-black text-[50px] leading-[45px] sm:text-[50px] sm:leading-[45px] lg:text-6xl lg:leading-[50px] ${bigShoulders.className}`,
+        Tag === "h4" && `font-black text-[32px] leading-[32px] lg:text-4xl lg:leading-[36px] ${bigShoulders.className}`,
+        variant === "md" && `font-light text-[18px] leading-[28px] lg:text-2xl lg:leading-[32px] ${outfit.className}`,
+        variant === "sm" && `font-light text-lg leading-[28px] ${outfit.className}`,
+        display && bigShoulders.className,
         className
       );
   return <Tag className={textStyles} {...otherProps}>{children}</Tag>;

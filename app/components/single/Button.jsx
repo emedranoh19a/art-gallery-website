@@ -20,7 +20,7 @@ const iconStyles = cn(
   );
   return (
     <Link href={backToHome?"/":"/location"} className={linkStyles}>
-      <Text as="span" variant="md" className={textStyles} display>
+      <Text as="span" className={textStyles} display>
         {backToHome?"Back to home":"our location"}
       </Text>
       <span className={iconStyles}>
