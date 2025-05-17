@@ -4,7 +4,7 @@ import Text from "./Text";
 import Image from "next/image";
 
 export default function Button({ backToHome = false }) {
-  const linkStyles = cn("group flex gap-0 mb-1 w-fit", backToHome && "flex-row-reverse");
+  const linkStyles = cn("group flex gap-0 mb-1 w-fit z-10", backToHome && "flex-row-reverse");
   const textStyles = cn(
     "font-extrabold uppercase text-white text-[20px] tracking-[3.64px]",
     "py-6 px-8",
